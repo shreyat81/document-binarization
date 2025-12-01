@@ -1,6 +1,14 @@
-# Document Binarization - Production Ready
+# Document Binarization — Results Summary
 
-A state-of-the-art document binarization model achieving **99.07% F1 score** on the DIBCO benchmark.
+This repository contains a document binarization model (EfficientNet-B0 encoder + U-Net decoder) and results produced by post-training analysis using the Whale Optimization Algorithm (WOA) to fine-tune the binarization threshold.
+
+For a concise, reproducible collection of evaluation figures and sample comparisons suitable for inclusion in your research paper, open the Jupyter notebook:
+
+```
+results_analysis/Results_Analysis_Notebook.ipynb
+```
+
+The `results_analysis/` directory contains ready-to-use figures, sample visualizations, and machine-readable metrics (JSON/CSV).
 
 ## 🎯 Model Performance
 
@@ -24,6 +32,8 @@ A state-of-the-art document binarization model achieving **99.07% F1 score** on 
 ├── best_model.pth                # Trained model checkpoint
 ├── test_evaluation_results.json  # Test set metrics
 ├── requirements.txt              # Python dependencies
+├── src/
+│   └── woa_optimize.py           # Whale Optimization Algorithm
 └── split/                        # Preprocessed dataset
     ├── train/                    # 3,631 training patches
     ├── val/                      # 520 validation patches
@@ -65,6 +75,32 @@ python inference.py --checkpoint best_model.pth \
 **Demo with visualization:**
 ```bash
 python demo_inference.py
+```
+
+## 🐋 Whale Optimization Algorithm (WOA)
+
+This project uses **Whale Optimization Algorithm** for optimizing binarization thresholds - a nature-inspired metaheuristic algorithm that mimics humpback whale hunting behavior.
+
+### Benefits of WOA:
+- **Adaptive threshold finding** for different document types
+- **Better generalization** across varied image conditions
+- **Nature-inspired optimization** - no gradient required
+- **Fast convergence** for threshold optimization
+
+### Run WOA Optimization:
+```bash
+# Quick optimization (fast, 2-3 minutes)
+python src/woa_optimize.py --mode quick \
+                           --checkpoint best_model.pth \
+                           --images split/val/images \
+                           --gt split/val/gt
+
+# Full optimization (better results, 10-15 minutes)
+python src/woa_optimize.py --mode full \
+                           --checkpoint best_model.pth \
+                           --images split/val/images \
+                           --gt split/val/gt \
+                           --output optimized_threshold.json
 ```
 
 ## 🔧 Advanced Usage

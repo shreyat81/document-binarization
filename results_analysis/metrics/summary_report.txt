@@ -1,0 +1,26 @@
+================================================================================
+COMPREHENSIVE RESULTS ANALYSIS SUMMARY
+================================================================================
+
+Test Samples: 100
+Threshold: 0.5040
+
+Average Metrics:
+----------------------------------------
+F1 Score       : 0.9903
+Precision      : 0.9905
+Recall         : 0.9902
+Accuracy       : 0.9828
+Specificity    : 0.8173
+
+Confusion Matrix:
+----------------------------------------
+True Positives:  5,965,771
+False Positives: 55,059
+True Negatives:  474,898
+False Negatives: 57,872
+
+Threshold Analysis:
+----------------------------------------
+Optimal Threshold: 0.5040
+Best F1 Score:     0.9903

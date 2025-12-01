@@ -1,0 +1,10 @@
+{
+  "best_threshold": 0.5040003657341003,
+  "best_f1": 0.9916406869888306,
+  "baseline_f1": 0.9916138504159767,
+  "improvement": 2.6836572853849994e-05,
+  "mode": "normal",
+  "population_size": 10,
+  "iterations": 20,
+  "samples_used": 50
+}

@@ -1,10 +1,12 @@
 """
-Fuzzy Logic System for Document Binarization
-============================================
+Whale Optimization Algorithm for Document Binarization
+=======================================================
 
-This module implements a fuzzy inference system that combines neural network
-probability maps with local image features (contrast, entropy) to improve
-binarization results.
+This module implements Whale Optimization Algorithm (WOA) for optimizing
+binarization thresholds to improve performance across different document types.
+
+WOA is a nature-inspired metaheuristic algorithm that mimics the hunting
+behavior of humpback whales.
 
 Author: Document Binarization Project
 """
