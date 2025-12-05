@@ -4,56 +4,28 @@ __pycache__/
 *$py.class
 *.so
 .Python
-*.egg-info/
-dist/
-build/
 
-# Environments
-.env
+# Virtual Environment
 .venv/
-env/
 venv/
 ENV/
+env/
 
-# IDEs
-.vscode/
-.idea/
-*.swp
-*.swo
-*~
+# Jupyter Notebook
+.ipynb_checkpoints
 
 # macOS
 .DS_Store
-.AppleDouble
-.LSOverride
 
-# Jupyter
-.ipynb_checkpoints/
-*.ipynb
+# Generated outputs (can be regenerated)
+sample_output/
+dibco_all_outputs/
+generation_log.txt
 
-# Model checkpoints (large files - host on Kaggle/HuggingFace)
-checkpoints/*.pth
-checkpoints/*.json
-*.pth
-*.pt
-*.ckpt
-
-# Large datasets (host on Kaggle/Google Drive)
-*.zip
-*.tar.gz
-dibco-dataset.zip
-
-# Data (preprocessed is large)
-DIBCO/
-DIBCO_CLEAN/
-grey_scale/
-normalization/
-resize_patch/
-
-# Logs
-*.log
-logs/
+# IDE
+.vscode/
+.idea/
 
 # Temporary files
+*.log
 *.tmp
-temp/
